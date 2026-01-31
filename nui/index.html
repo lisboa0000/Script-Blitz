@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lisboa Blitz - Painel Policial</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container" style="display: none;">
+        <header>
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="icon-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="title-group">
+                        <h1>MENU BLITZ</h1>
+                        <p>DEPARTAMENTO DE POLÍCIA</p>
+                    </div>
+                </div>
+                <button id="clear-all" class="btn-clear">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                    </svg>
+                    LIMPAR ÁREA
+                </button>
+            </div>
+        </header>
+
+        <main class="grid-container">
+            <!-- Itens serão renderizados aqui ou mantidos estáticos para compatibilidade -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/b.png" alt="Barricada Madeira">
+                </div>
+                <div class="card-info">
+                    <h3>Barricada Madeira</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Barricada Madeira" value="barricada">COLOCAR</button>
+                        <button class="btn-action retirar" value="barricada">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/barricada-c.png" alt="Barricada Baixa">
+                </div>
+                <div class="card-info">
+                    <h3>Barricada Baixa</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Barricada Baixa" value="barricadab">COLOCAR</button>
+                        <button class="btn-action retirar" value="barricadab">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/barricada-c2.png" alt="Barricada Concreto">
+                </div>
+                <div class="card-info">
+                    <h3>Barricada Concreto</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Barricada Concreto" value="barricadac">COLOCAR</button>
+                        <button class="btn-action retirar" value="barricadac">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/barricada-seta.png" alt="Barricada Seta">
+                </div>
+                <div class="card-info">
+                    <h3>Barricada Seta</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Barricada Seta" value="barricadas">COLOCAR</button>
+                        <button class="btn-action retirar" value="barricadas">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/stinger.png" alt="Spike">
+                </div>
+                <div class="card-info">
+                    <h3>Spike (Fura-Pneus)</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Spike" value="spike">COLOCAR</button>
+                        <button class="btn-action retirar" value="spike">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/cone.png" alt="Cone">
+                </div>
+                <div class="card-info">
+                    <h3>Cone Padrão</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Cone 1" value="cone">COLOCAR</button>
+                        <button class="btn-action retirar" value="cone">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/cone2.png" alt="Cone 2">
+                </div>
+                <div class="card-info">
+                    <h3>Cone Sinalizador</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Cone 2" value="cone2">COLOCAR</button>
+                        <button class="btn-action retirar" value="cone2">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="imgs/cone-3.png" alt="Cone 3">
+                </div>
+                <div class="card-info">
+                    <h3>Cone Grande</h3>
+                    <div class="card-actions">
+                        <button class="btn-action colocar" name="Cone 3" value="cone3">COLOCAR</button>
+                        <button class="btn-action retirar" value="cone3">RETIRAR</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Pressione <span>ESC</span> para fechar o painel</p>
+            <div class="author-tag">Desenvolvido por: <span>! Lisboa</span></div>
+        </footer>
+    </div>
+
+    <div class="info-overlay" style="display: none;">
+        <div class="info-box">
+            <div class="info-icon">!</div>
+            <div class="info-text">
+                <p>POSICIONANDO: <span class="obj">OBJETO</span></p>
+                <div class="controls">
+                    <div class="key"><span>SETAS</span> MOVER</div>
+                    <div class="key"><span>Q / E</span> GIRAR</div>
+                    <div class="key"><span>SHIFT</span> AJUSTE FINO</div>
+                    <div class="key"><span>ENTER</span> COLOCAR</div>
+                    <div class="key"><span>F</span> VOLTAR AO MENU</div>
+                    <div class="key"><span>ESC</span> CANCELAR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

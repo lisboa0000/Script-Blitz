@@ -1,0 +1,316 @@
+:root {
+    --primary: #f75c35;
+    --primary-dark: #f75c35;
+    --bg-dark: rgba(15, 15, 15, 0.95);
+    --bg-card: rgba(30, 30, 30, 0.8);
+    --text-main: #ffffff;
+    --text-dim: #b3b3b3;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: hidden;
+}
+
+.container {
+    width: 900px;
+    max-height: 80vh;
+    background: var(--bg-dark);
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+header {
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-badge {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.icon-badge svg {
+    width: 30px;
+    height: 30px;
+}
+
+.title-group h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.title-group p {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-clear svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-clear:hover {
+    background: #ff4444;
+    color: white;
+}
+
+.grid-container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.grid-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 18px 12px; /* Ajustado padding interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 0; /* Evita que o card estoure o grid */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card-image {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    max-height: 80px;
+    max-width: 100%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+}
+
+.card-info h3 {
+    font-size: 14px;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 10px 5px; /* Aumentado o padding vertical e adicionado horizontal */
+    border: none;
+    border-radius: 6px;
+    font-size: 9px; /* Reduzido levemente para caber melhor */
+    font-weight: 800;
+    letter-spacing: 0.5px; /* Adicionado um leve espaçamento entre letras */
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+}
+
+.btn-action.colocar {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-action.colocar:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.4);
+}
+
+.btn-action.retirar {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.btn-action.retirar:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+footer p {
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+footer span {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.author-tag {
+    position: absolute;
+    right: 20px;
+    bottom: 12px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.author-tag span {
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+/* Info Overlay */
+.info-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.info-box {
+    background: var(--bg-dark);
+    border-left: 5px solid var(--primary);
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+}
+
+.info-text p {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-text .obj {
+    color: var(--white);
+    font-weight: 800;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+.key {
+    font-size: 10px;
+    color: var(--text-dim);
+    font-weight: 600;
+}
+
+.key span {
+    background: var(--primary);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: 800;
+}
